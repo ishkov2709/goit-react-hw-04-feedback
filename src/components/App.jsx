@@ -12,19 +12,7 @@ export const App = () => {
   };
 
   const reducer = (state, { type }) => {
-    switch (type) {
-      case 'good':
-        return { ...state, [type]: state[type] + 1 };
-
-      case 'neutral':
-        return { ...state, [type]: state[type] + 1 };
-
-      case 'bad':
-        return { ...state, [type]: state[type] + 1 };
-
-      default:
-        throw new Error();
-    }
+    return { ...state, [type]: state[type] + 1 };
   };
   const [state, dispatch] = useReducer(reducer, initialState);
 
